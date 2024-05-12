@@ -1,0 +1,88 @@
+:host {
+  position: sticky;
+  flex: 1 0;
+  flex-direction: column;
+  margin: 30px 100px 0;
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin: 5px 0 20px 0;
+
+    button {
+      cursor: pointer;
+      background-color: black;
+      border: none;
+      height: 30px;
+      color: white;
+    }
+
+    .buttons {
+      display: flex;
+      :not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    .btn {
+      &__rounded {
+        flex: 0 0 30px;
+        max-width: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.filters {
+          img {
+            width: 17px;
+          }
+        }
+
+        &.telegram {
+          img {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            left: -1px;
+          }
+        }
+
+        &.user {
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .logo {
+      background: transparent url("../../../assets/images/logo.svg") 0 0 no-repeat padding-box;
+      top: 19px;
+      height: 77px;
+      width: 230px;
+      margin: auto;
+    }
+  }
+
+  .view-types {
+    justify-content: center;
+    margin: 1rem 0;
+
+    .btn-viewType {
+      background-color: unset;
+      border: none;
+      padding: 0 1.5rem;
+
+      &:not(.disabled) {
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid black;
+      }
+    }
+  }
+}

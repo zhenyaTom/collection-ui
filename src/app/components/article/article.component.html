@@ -1,0 +1,25 @@
+<div class="article d-flex" [class]="getArticleClassByType(article.type)" *ngIf="article">
+    <div class="article-header d-flex">
+        <h2 class="article-header__type">{{getArticleTypeDisplayValue(article.type)}}</h2>
+    </div>
+    <div class="article-template d-flex">
+        <div class="article-template__general d-flex">
+            <h2 *ngIf="!article.dateEnd">{{article.dateStart | localizedDate:"d MMMM"}}</h2>
+            <h2 *ngIf="article.dateEnd && article.dateStart.getMonth() === article.dateEnd.getMonth()">
+                {{article.dateStart | localizedDate:"d-"}}{{article.dateEnd | localizedDate:"d MMMM"}}
+            </h2>
+            <h2 *ngIf="article.dateEnd && article.dateStart.getMonth() !== article.dateEnd.getMonth()">
+                {{article.dateStart | localizedDate:"d MMMM - "}}{{article.dateEnd | localizedDate:" d MMMM"}}
+            </h2>
+        </div>
+        <h1 class="article-template__name">{{article.name}}</h1>
+        <div class="article-template__description d-flex">{{article.description}}</div>
+        <div class="article-template__footer d-flex">
+            <div *ngIf="article.tags" class="article-template__tags d-flex">
+                <ng-container *ngFor="let tag of article.tags">
+                    <button class="btn-tag">{{tag}}</button>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

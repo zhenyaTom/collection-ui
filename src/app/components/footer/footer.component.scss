@@ -1,0 +1,17 @@
+@import "../../../styles/colors";
+
+:host {
+  height: 54px;
+  color: $white;
+  background-color: $text-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .footer-name {
+    margin-right: 2rem;
+  }
+}

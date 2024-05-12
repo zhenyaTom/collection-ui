@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="buttons">
+        <button class="btn__rounded filters"
+                (click)="toggleAdvancedFilters()">
+            <img src="assets/icons/filters.svg" loading="lazy" alt="toggle filters"/>
+        </button>
+        <button class="btn__rounded telegram">
+            <img src="assets/icons/telegram.svg" loading="lazy" alt="toggle filters"/>
+        </button>
+        <button class="btn__rounded btn__language">
+            <span>{{'language.name.short' | translate}}</span>
+        </button>
+    </div>
+    <span class="logo"></span>
+    <button class="btn__rounded user">
+        <img src="assets/icons/user.svg" loading="lazy" alt="toggle filters"/>
+    </button>
+</div>
+
+<app-filter
+    [advancedFiltersEnabled]="advancedFiltersEnabled"
+></app-filter>
+
+<div class="view-types d-flex">
+    <button class="btn-viewType" *ngFor="let type of availableViewTypes" [class.disabled]="type !== ViewType.table" [disabled]="type !== ViewType.table">
+        <h3>{{'header.view.' + type | translate}}</h3>
+    </button>
+</div>

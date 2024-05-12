@@ -1,0 +1,17 @@
+:host {
+  margin: 0 100px 54px;
+
+  .article-list {
+    display: flex;
+    flex-direction: column;
+
+    &__articles {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}

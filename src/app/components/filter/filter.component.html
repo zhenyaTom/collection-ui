@@ -1,0 +1,15 @@
+<form [formGroup]="form" autocomplete="off">
+    <input
+        class="form-control search-text"
+        spellcheck="false"
+        name="searchText"
+        type="text"
+        [placeholder]="'header.filter.inputText.placeholder' | translate"
+        (keyup.enter)="search()"
+        formControlName="searchText">
+    <div *ngIf="advancedFiltersEnabled">
+        advancedFilters
+    </div>
+</form>
+
+

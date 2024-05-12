@@ -1,0 +1,206 @@
+@import "../../../styles/colors";
+
+:host {
+  display: flex;
+  width: 24%;
+  min-width: 350px;
+  aspect-ratio : 1 / 1;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 1%;
+  }
+  margin-bottom: 40px;
+
+  .article {
+    flex-direction: column;
+    width: 100%;
+    color: $text-black;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 5px 5px $text-black;
+    }
+
+    h1 {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+
+    &.recollection {
+      border: 1px solid $recollection;
+
+      .article-header, .btn-tag {
+        background-color: $recollection;
+      }
+
+      .article-template {
+        background-color: rgba($recollection, 0.05);
+      }
+
+      h1 {
+        background-image: $recollection-gradient;
+      }
+    }
+
+    &.meet {
+      border: 1px solid $meet;
+
+      .article-header, .btn-tag {
+        background-color: $meet;
+      }
+
+      .article-template {
+        background-color: rgba($meet, 0.05);
+      }
+
+      h1 {
+        background-image: $meet-gradient;
+      }
+    }
+
+    &.adaration {
+      border: 1px solid $adaration;
+
+      .article-header, .btn-tag {
+        background-color: $adaration;
+      }
+
+      .article-template {
+        background-color: rgba($adaration, 0.05);
+      }
+
+      h1 {
+        background-image: $adaration-gradient;
+      }
+    }
+
+    &.seminar {
+      border: 1px solid $seminar;
+
+      .article-header, .btn-tag {
+        background-color: $seminar;
+      }
+
+      .article-template {
+        background-color: rgba($seminar, 0.05);
+      }
+
+      h1 {
+        background-image: $seminar-gradient;
+      }
+    }
+
+    &.farmation {
+      border: 1px solid $farmation;
+
+      .article-header, .btn-tag {
+        background-color: $farmation;
+      }
+
+      .article-template {
+        background-color: rgba($farmation, 0.05);
+      }
+
+      h1 {
+        background-image: $farmation-gradient;
+      }
+    }
+
+    &.fest {
+      border: 1px solid $fest;
+
+      .article-header, .btn-tag {
+        background-color: $fest;
+      }
+
+      .article-template {
+        background-color: rgba($fest, 0.05);
+      }
+
+      h1 {
+        background-image: $fest-gradient;
+      }
+    }
+
+    &.regularMeet {
+      border: 1px solid $regularMeet;
+
+      .article-header, .btn-tag {
+        background-color: $regularMeet;
+      }
+
+      .article-template {
+        background-color: rgba($regularMeet, 0.05);
+      }
+
+      h1 {
+        background-image: $regularMeet-gradient;
+      }
+    }
+
+    &.piligrimka {
+      border: 1px solid $piligrimka;
+
+      .article-header, .btn-tag {
+        background-color: $piligrimka;
+      }
+
+      .article-template {
+        background-color: rgba($piligrimka, 0.05);
+      }
+
+      h1 {
+        background-image: $piligrimka-gradient;
+      }
+    }
+
+    .article-header {
+      flex-shrink: 0;
+      height: 40px;
+      align-items: center;
+      padding: 0 0.75rem;
+    }
+
+    .article-template {
+      flex-direction: column;
+      height: 100%;
+      padding: 0.75rem;
+
+      &__general {
+        flex-shrink: 0;
+        height: 42px;
+      }
+
+      &__name {
+        margin-bottom: 1rem;
+      }
+
+      &__description {
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      &__tags {
+        flex-wrap: wrap;
+        flex-shrink: 0;
+      }
+    }
+
+    .btn-tag {
+      border: none;
+      height: 35px;
+      border-radius: 17.5px;
+      padding: 0 1rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+

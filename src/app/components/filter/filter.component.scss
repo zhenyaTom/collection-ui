@@ -1,0 +1,18 @@
+@import "../../../styles/colors";
+
+:host {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-text {
+    display: flex;
+    height: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid $text-black;
+    padding: 0 1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+}
