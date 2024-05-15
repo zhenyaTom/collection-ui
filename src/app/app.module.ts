@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +12,6 @@ import { FilterComponent } from './components/filter/filter.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ArticlesTableComponent } from './components/articles-table/articles-table.component';
 import { ArticleComponent } from './components/article/article.component';
-import { NgScrollbarModule } from 'ngx-scrollbar';
 import { LocalizedDatePipe } from './components/pipes/localized-date.pipe';
 import { registerLocaleData } from '@angular/common';
 import localeBE from '@angular/common/locales/be';
@@ -48,7 +47,6 @@ registerLocaleData(localePL);
       isolate: false
     }),
     ReactiveFormsModule,
-    NgScrollbarModule,
     LocalizedDatePipe,
   ],
   providers: [],
